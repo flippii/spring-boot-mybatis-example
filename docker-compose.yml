@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  spring_boot_mybatis_app:
+    image: kgent/spring-boot-mybatis:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+    image: mysql
+    environment:
+      - "MYSQL_ALLOW_EMPTY_PASSWORD=true"
+    ports:
+      - "3306:3306"
