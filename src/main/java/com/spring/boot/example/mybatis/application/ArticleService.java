@@ -112,8 +112,8 @@ public class ArticleService {
 
         articles.forEach(articleData -> {
             if (followingAuthors.contains(articleData.getProfileData().getId())) {
-            articleData.getProfileData().setFollowing(true);
-        }
+                articleData.getProfileData().setFollowing(true);
+            }
         });
     }
 
